@@ -1,0 +1,41 @@
+* {
+  font-family: 'Dosis', 'Noto Sans SC', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.chinese {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#000, #202020);
+  color: white;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form * {
+  margin: 1rem 0 0.5rem;
+}
+button {
+  padding: 0.5rem 0.8rem;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 0.1rem;
+  margin: 0.3rem 0.5rem;
+}
+.presets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

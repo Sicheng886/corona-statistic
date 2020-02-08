@@ -1,6 +1,6 @@
 {
-  "name": "vib-the-phone",
-  "version": "0.1.0",
+  "name": "corona-statistic",
+  "version": "1.0.0",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -28,5 +28,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "npm": "6.10.2",
+    "node": "12.9.1"
   }
 }

@@ -1,0 +1,17 @@
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.btn {
+  background-color: #f9bf45;
+  width: 5rem;
+  height: 2rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+}

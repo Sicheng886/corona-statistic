@@ -1,7 +1,5 @@
-# Vib the phone
+# Corona-statistic
 
-this is a simple react webpage using android navigator.vibrate() api to make custom vibration.
+This is a simple web app using React and Rechart to visualise the current corona virus on global. Through the JUH api.
 
 using **npm start** to start the project.
-
-You can make custom preset vibrations in **/src/vibType.json** .

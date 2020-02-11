@@ -3,6 +3,9 @@ import axios from 'axios';
 import citiIndex from './cityIndex.json';
 import moment from 'moment';
 
+import result from './result.json';
+import fileHandler from './fileHandler';
+
 export const Context = React.createContext();
 
 export class Provider extends Component {
@@ -10,6 +13,7 @@ export class Provider extends Component {
     rawData: [],
     updateTime: 'not avaliable',
     lineChartData: [],
+    detailedData: fileHandler(result),
     getData: async () => {
       const { data } = await axios.get(
         `https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=1=1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Confirmed desc,Country_Region asc,Province_State asc&resultOffset=0&resultRecordCount=250&cacheHint=true`

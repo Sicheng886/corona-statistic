@@ -4,6 +4,7 @@ import {
   BarChart,
   Bar,
   ComposedChart,
+  LineChart,
   Line,
   Brush,
   XAxis,
@@ -136,6 +137,44 @@ export const ReLinechart = ({ data, area }) => {
             />
           ) : null}
         </ComposedChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+const colors = ['#4D5139', '#F9BF45', '#78552B'];
+
+export const DetailedChart = ({ data }) => {
+  return (
+    <div>
+      <ResponsiveContainer width='100%' height={600}>
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray='3 3' />
+          <XAxis
+            dataKey='timeStamp'
+            tickFormatter={unixTime => moment(unixTime * 1000).format('MMM D')}
+          />
+          <YAxis allowDataOverflow={false} type='number' />
+          <Tooltip
+            labelFormatter={unixTime => moment(unixTime * 1000).format('MMM D')}
+          />
+          <Legend />
+          {/* <Line type='monotone' dataKey='Hubei' stroke='#8884d8' /> */}
+          {Object.keys(data[0]).map((key, index) => {
+            if (key !== 'timeStamp' && key !== '') {
+              return (
+                <Line
+                  key={key}
+                  type='monotone'
+                  dataKey={key}
+                  stroke={colors[index]}
+                  strokeWidth={2}
+                />
+              );
+            }
+            return null;
+          })}
+        </LineChart>
       </ResponsiveContainer>
     </div>
   );

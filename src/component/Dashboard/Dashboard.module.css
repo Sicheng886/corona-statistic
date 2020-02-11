@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #fcfaf2;
+}
+
+.checkBox {
+  margin: 0.8rem 4.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkBox div {
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkBox label {
+  margin-right: 1rem;
+}
+.checkBox input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer {
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 760px) {
+  .container {
+    overflow: hidden;
+  }
+}

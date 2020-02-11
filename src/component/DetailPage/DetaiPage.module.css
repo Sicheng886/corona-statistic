@@ -1,0 +1,34 @@
+.wrapper {
+  width: 100%;
+}
+
+.selectDiv {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 1rem 1rem;
+  justify-content: space-between;
+}
+
+.selectDiv select {
+  font-size: 0.8rem;
+  width: 25%;
+}
+
+.chart {
+  width: 96%;
+  margin: auto;
+}
+
+.footer {
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .selectDiv {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+  }
+}

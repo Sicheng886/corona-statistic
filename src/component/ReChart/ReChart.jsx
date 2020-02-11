@@ -147,7 +147,7 @@ const colors = ['#4D5139', '#F9BF45', '#78552B'];
 export const DetailedChart = ({ data }) => {
   return (
     <div>
-      <ResponsiveContainer width='100%' height={600}>
+      <ResponsiveContainer width='100%' height={550}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray='3 3' />
           <XAxis

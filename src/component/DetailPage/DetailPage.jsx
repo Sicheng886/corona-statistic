@@ -27,7 +27,7 @@ const DetailPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Header title='Detai Page' subtitle='yet to be done!' />
+      <Header title='Detail Page' subtitle='Update to 10th Feb' />
       <div className={styles.selectDiv}>
         <label htmlFor=''>Select cities</label>
         <CitySelect value={city1} setValue={setCiti1} valueList={locations} />

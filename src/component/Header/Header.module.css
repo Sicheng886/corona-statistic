@@ -7,6 +7,9 @@
   padding-left: 3.5rem;
   background-color: #fcbc00;
   box-shadow: 0.1rem 0rem 0.3rem 0.1rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .title {

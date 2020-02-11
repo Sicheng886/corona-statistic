@@ -3,6 +3,7 @@
   height: 100vh;
   overflow-x: hidden;
   background-color: #fcfaf2;
+  padding-top: 4rem;
 }
 
 .checkBox {

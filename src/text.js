@@ -1,5 +1,5 @@
 export const enText = {
-  title: 'Current Coronavirus Statistics',
+  title: 'Coronavirus Statistics',
   update: 'Last Update:',
   selectArea: 'Select Area: ',
   global: 'Global',

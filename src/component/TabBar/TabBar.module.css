@@ -13,9 +13,16 @@
 
 .index {
   display: block;
+  border-bottom: 4px solid #febc00;
+  width: 90%;
+  color: #febc00;
+  height: 2.5rem;
+  padding: 0.5rem 0;
+  margin: auto;
+  text-decoration: none;
+  background-color: #fff;
+}
 
-  width: 50%;
-  color: #fff;
-  height: 2rem;
-  margin: 1rem auto 0;
+.index:first-of-type {
+  border-top: 4px solid #fff;
 }

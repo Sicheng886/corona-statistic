@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 3.5rem;
   background-color: #fcbc00;
   box-shadow: 0.1rem 0rem 0.3rem 0.1rem rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -16,11 +15,21 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
-  margin: 0.7rem 1rem 0.2rem;
+  margin: 0.7rem 0.5rem 0.2rem 4.5rem;
 }
 .subtitle {
   font-size: 0.8rem;
   font-weight: 500;
   color: #fff;
-  margin: 0 1rem 0.5rem;
+  margin: 0 0.5rem 0.5rem 4.5rem;
+}
+
+@media only screen and (max-width: 360px) {
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+  }
 }

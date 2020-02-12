@@ -5,10 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "axios": "^0.19.2",
-    "express": "^4.17.1",
-    "express-favicon": "^2.0.1",
     "moment": "^2.24.0",
-    "path": "^0.12.7",
     "react": "^16.11.0",
     "react-burger-menu": "^2.6.13",
     "react-dom": "^16.11.0",
@@ -17,7 +14,7 @@
     "recharts": "^2.0.0-beta.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -40,5 +37,6 @@
   "engines": {
     "npm": "6.10.2",
     "node": "12.9.1"
-  }
+  },
+  "heroku-postbuild": "npm run build"
 }

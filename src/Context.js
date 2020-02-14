@@ -35,11 +35,7 @@ export class Provider extends Component {
     },
     getLineChartData: async () => {
       const { data } = await axios.get(
-        `https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/cases_time/FeatureServer/0/query?f=json&where=Report_Date<='${moment(
-          new Date().getTime()
-        ).format(
-          'YYYY[-]MM[-]DD[ ]HH[:]mm[:]ss'
-        )}'&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Report_Date asc&resultOffset=0&resultRecordCount=2000&cacheHint=true`
+        'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/cases_time_v3/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Report_Date_String%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true'
       );
 
       const content = data.features;

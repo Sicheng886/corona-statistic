@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import citiIndex from './cityIndex.json';
-import moment from 'moment';
 
 import result from './result.json';
 import fileHandler from './fileHandler';

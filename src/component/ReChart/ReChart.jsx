@@ -47,8 +47,8 @@ export const ReBarchart = ({ data }) => {
           <Tooltip content={<BarTip />} />
           <Legend />
           <Bar dataKey='Confirmed' fill='#fcbc00' />
-          <Bar dataKey='Deaths' fill='#760101' />
           <Bar dataKey='Recovered' fill='#82ca9d' />
+          <Bar dataKey='Deaths' fill='#760101' />
         </BarChart>
       </ResponsiveContainer>
       <p>Try to move the brush above to adjust range for display</p>

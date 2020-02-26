@@ -28,7 +28,8 @@ export class Provider extends Component {
           : data.Country_Region;
         return data;
       });
-      this.setState({ rawData: rawData });
+      const filteredData = rawData.filter(record => record.Confirmed > 2);
+      this.setState({ rawData: filteredData });
       const lastUpdate = content[0].attributes.Last_Update;
       this.setState({ updateTime: new Date(lastUpdate).toLocaleString() });
     },

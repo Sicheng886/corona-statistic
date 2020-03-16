@@ -35,10 +35,11 @@ const BarTip = ({ active, payload, label }) => {
   return null;
 };
 
-export const ReBarchart = ({ data }) => {
+export const ReBarchart = ({ data, isActiveOnly }) => {
+  console.log(data);
   return (
     <div className={styles.barChart}>
-      <ResponsiveContainer width='100%' height={1500}>
+      <ResponsiveContainer width='100%' height={2000}>
         <BarChart data={data} layout='vertical' barCategoryGap='6%' barGap='4%'>
           <Brush dataKey='name' height={30} stroke='#8884d8' />
           <CartesianGrid strokeDasharray='3 3' />
@@ -46,9 +47,10 @@ export const ReBarchart = ({ data }) => {
           <YAxis type='category' dataKey='name' />
           <Tooltip content={<BarTip />} />
           <Legend />
-          <Bar dataKey='Confirmed' fill='#fcbc00' />
-          <Bar dataKey='Recovered' fill='#82ca9d' />
-          <Bar dataKey='Deaths' fill='#760101' />
+          {isActiveOnly ? <Bar dataKey='Active' fill='#fcbc00' /> : null}
+          {!isActiveOnly ? <Bar dataKey='Confirmed' fill='#fcbc00' /> : null}
+          {!isActiveOnly ? <Bar dataKey='Recovered' fill='#82ca9d' /> : null}
+          {!isActiveOnly ? <Bar dataKey='Deaths' fill='#760101' /> : null}
         </BarChart>
       </ResponsiveContainer>
       <p>Try to move the brush above to adjust range for display</p>

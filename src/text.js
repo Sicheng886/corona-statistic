@@ -8,6 +8,7 @@ export const enText = {
   Confirmed: ' Confirmed',
   Recovered: 'Recovered',
   Deaths: 'Deaths',
+  Active: 'Active',
   Mainland_China: 'Mainland China',
   Other_Locations: 'Other Locations',
   datasource: 'Data source: '
@@ -23,6 +24,7 @@ export const chText = {
   Confirmed: '确诊',
   Recovered: '康复',
   Deaths: '死亡',
+  Active: '现存',
   Mainland_China: '中国大陆',
   Other_Locations: '其它地区',
   datasource: '数据来源: '

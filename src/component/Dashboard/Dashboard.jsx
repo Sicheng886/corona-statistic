@@ -13,32 +13,36 @@ const Dashboard = () => {
 
   const [finalData, setFinalData] = useState(rawData);
   const [area, setArea] = useState('1');
+  const [isActiveOnly, setIsActiveOnly] = useState(false);
 
   useEffect(() => {
+    const sortedData = isActiveOnly
+      ? rawData.sort((a, b) => b.Active - a.Active)
+      : rawData;
     if (area === '1') {
       //china
-      const filterData = rawData.filter(
+      const filterData = sortedData.filter(
         item =>
-          item.Country_Region === 'Mainland China' ||
+          item.Country_Region === 'China' ||
           item.Country_Region === 'Hong Kong' ||
           item.Country_Region === 'Macau' ||
-          item.Country_Region === 'Taiwan'
+          item.Country_Region === 'Taiwan*'
       );
       setFinalData(filterData);
     } else if (area === '-1') {
       //overseas
-      const filterData = rawData.filter(
+      const filterData = sortedData.filter(
         item =>
-          item.Country_Region !== 'Mainland China' &&
+          item.Country_Region !== 'China' &&
           item.Country_Region !== 'Hong Kong' &&
           item.Country_Region !== 'Macau' &&
-          item.Country_Region !== 'Taiwan'
+          item.Country_Region !== 'Taiwan*'
       );
       setFinalData(filterData);
     } else {
-      setFinalData(rawData);
+      setFinalData(sortedData);
     }
-  }, [area, rawData]);
+  }, [area, rawData, isActiveOnly]);
 
   return (
     <div className={styles.container}>
@@ -57,10 +61,19 @@ const Dashboard = () => {
             <option value='-1'>{text.oversea}</option>
           </select>
         </div>
+        <div>
+          <label htmlFor='active'>Show Active</label>
+          <input
+            type='checkbox'
+            name=''
+            id='active'
+            onChange={e => setIsActiveOnly(e.target.checked)}
+          />
+        </div>
       </div>
       {/* <VirusChart barData={finalData} updateTime={updateTime} />
       <VirusLine data={finalLineData} /> */}
-      <ReBarchart data={finalData} />
+      <ReBarchart data={finalData} isActiveOnly={isActiveOnly} />
       <ReLinechart data={lineChartData} area={area} />
       <p className={styles.footer}>
         {text.datasource}{' '}
